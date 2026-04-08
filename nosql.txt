@@ -1,0 +1,51 @@
+mca> db.createCollection("customer")
+{ ok: 1 }
+mca> db.customer.insertMany([{"name":"anu","city":"ekm","phn_no":"12349987812","age":22},{"name":"liya","city":"kannur","phn_no":"12345678909","age":20},{"name":"gouri","city":"kozhicode","phn_no":"0987654323","age":32},{"name":"krishna","city":"thrissur","phn_no":"23456789987","age":26},{"name":"miya","city":"aluva","phn_no":"23456789987","age":31}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('69d3779cadb24126a144ba89'),
+    '1': ObjectId('69d3779cadb24126a144ba8a'),
+    '2': ObjectId('69d3779cadb24126a144ba8b'),
+    '3': ObjectId('69d3779cadb24126a144ba8c'),
+    '4': ObjectId('69d3779cadb24126a144ba8d')
+  }
+}
+mca> db.customer.find().pretty()
+[
+  {
+    _id: ObjectId('69d3779cadb24126a144ba89'),
+    name: 'anu',
+    city: 'ekm',
+    phn_no: '12349987812',
+    age: 22
+  },
+  {
+    _id: ObjectId('69d3779cadb24126a144ba8a'),
+    name: 'liya',
+    city: 'kannur',
+    phn_no: '12345678909',
+    age: 20
+  },
+  {
+    _id: ObjectId('69d3779cadb24126a144ba8b'),
+    name: 'gouri',
+    city: 'kozhicode',
+    phn_no: '0987654323',
+    age: 32
+  },
+  {
+    _id: ObjectId('69d3779cadb24126a144ba8c'),
+    name: 'krishna',
+    city: 'thrissur',
+    phn_no: '23456789987',
+    age: 26
+  },
+  {
+    _id: ObjectId('69d3779cadb24126a144ba8d'),
+    name: 'miya',
+    city: 'aluva',
+    phn_no: '23456789987',
+    age: 31
+  }
+]
